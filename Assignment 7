@@ -1,0 +1,78 @@
+package kt;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class ArrayListExamples {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<String> friends = new ArrayList<>();
+        System.out.println("Nhập 5 tên bạn bè:");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Tên " + (i + 1) + ": ");
+            friends.add(scanner.nextLine());
+        }
+        System.out.println("Danh sách bạn bè: " + friends);
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            numbers.add(i);
+        }
+        numbers.remove(Integer.valueOf(5));
+        System.out.println("Danh sách sau khi xóa số 5: " + numbers);
+
+        ArrayList<String> cities = new ArrayList<>();
+        System.out.println("Nhập tên của 5 thành phố:");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Thành phố " + (i + 1) + ": ");
+            cities.add(scanner.nextLine());
+        }
+        System.out.println("Danh sách các thành phố:");
+        for (String city : cities) {
+            System.out.println(city);
+        }
+
+        ArrayList<String> languages = new ArrayList<>();
+        languages.add("Java");
+        languages.add("Python");
+        languages.add("C++");
+        languages.add("JavaScript");
+        System.out.print("Nhập ngôn ngữ cần tìm: ");
+        String keyword = scanner.nextLine();
+        boolean containsKeyword = languages.contains(keyword);
+        System.out.println("Danh sách có chứa '" + keyword + "': " + containsKeyword);
+
+        ArrayList<Integer> smallNumbers = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            smallNumbers.add(i);
+        }
+        smallNumbers.set(2, 100); 
+        System.out.println("Danh sách sau khi cập nhật: " + smallNumbers);
+
+        ArrayList<Integer> unsortedNumbers = new ArrayList<>();
+        unsortedNumbers.add(5);
+        unsortedNumbers.add(3);
+        unsortedNumbers.add(8);
+        unsortedNumbers.add(2);
+        unsortedNumbers.add(4);
+        Collections.sort(unsortedNumbers);
+        System.out.println("Danh sách sau khi sắp xếp: " + unsortedNumbers);
+
+        ArrayList<Integer> integerList = new ArrayList<>();
+        integerList.add(10);
+        integerList.add(20);
+        integerList.add(30);
+        integerList.add(40);
+        integerList.add(50);
+        Integer[] integerArray = integerList.toArray(new Integer[0]);
+        System.out.println("Các phần tử của mảng:");
+        for (int num : integerArray) {
+            System.out.println(num);
+        }
+
+        scanner.close();
+    }
+}
