@@ -1,0 +1,23 @@
+package kt;
+
+public class LongestWordFinder {
+    public static String findLongestWord(String s) {
+        String[] words = s.split("\\s+");
+        
+        String longestWord = "";
+        
+        for (String word : words) {
+            if (word.length() > longestWord.length()) {
+                longestWord = word;
+            }
+        }
+        
+        return longestWord;
+    }
+
+    public static void main(String[] args) {
+        String input = "I love programming";
+        System.out.println(findLongestWord(input)); 
+    }
+}
+
