@@ -1,0 +1,18 @@
+package kt;
+
+public class StringSplitter {
+	    public static String[] splitWords(String s) {
+	        return s.split("\\s+");  // Splits based on one or more whitespace characters
+	    }
+
+	    public static void main(String[] args) {
+	        String input = "Java is fun";
+	        String[] words = splitWords(input);
+	        
+	        // Print the array of words
+	        for (String word : words) {
+	            System.out.println(word);
+	        }
+	    }
+	}
+
