@@ -1,0 +1,14 @@
+package kt;
+
+public class SpaceRemover {
+	    public static String removeExtraSpaces(String s) {
+
+	        return s.trim().replaceAll("\\s+", " ");
+	    }
+
+	    public static void main(String[] args) {
+	        String input = "  Hello    World   ";
+	        System.out.println(removeExtraSpaces(input)); 
+	    }
+	}
+
