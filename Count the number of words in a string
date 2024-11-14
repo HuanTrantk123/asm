@@ -1,0 +1,18 @@
+package kt;
+
+public class WordCounter {
+	    public static int countWords(String s) {
+	        if (s == null || s.trim().isEmpty()) {
+	            return 0;  
+	        }
+	        
+	        String[] words = s.trim().split("\\s+"); 
+	        return words.length;  
+	    }
+
+	    public static void main(String[] args) {
+	        String input = "Java is fun";
+	        System.out.println(countWords(input)); 
+	    }
+	}
+
